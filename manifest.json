@@ -1,0 +1,33 @@
+{
+  "manifest_version": 2,
+
+  "name": "Dotnettips Updater",
+  "description": "This extension keeps you updated on current activities on dotnettips.info",
+  "version": "1.0",
+  "icons": { "16": "icon.png",
+           "48": "icon.png",
+          "128": "icon.png" },
+  
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+    "options_page": "popup.html",
+  
+  "permissions": [
+    "storage",
+     "tabs",
+	 "contextMenus",
+	 "alarms",
+	 "notifications"
+  ],
+"devtools_page": "devtools.htm",
+"omnibox": { "keyword" : ".net" },
+"background": {
+    "page": "background.htm"
+},
+"web_accessible_resources": [
+    "icon.png"
+  ],
+"content_security_policy": "script-src 'self' https://*.google.com; object-src 'self'"
+}
